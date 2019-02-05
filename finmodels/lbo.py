@@ -53,18 +53,5 @@ class LBOModel:
 
         return equity_returns
 
-# Example usage (commented out)
-# acquisition_price_example = 1000
-# equity_percentage_example = 0.3
-# debt_interest_rate_example = 0.05
-# projection_years_example = 5
 
-# Create an instance of LBOModel (commented out)
-# lbo_model = LBOModel(acquisition_price_example, equity_percentage_example,
-#                      debt_interest_rate_example, projection_years_example)
-
-# Calculate and print equity returns (commented out)
-# equity_returns_result = lbo_model.calculate_equity_returns()
-# print(f"Equity Returns for each year: {equity_returns_result}")
-#
 
