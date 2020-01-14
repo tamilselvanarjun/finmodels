@@ -29,7 +29,7 @@ if __name__ == "__main__":
     volatility = 0.2        # Volatility of the underlying asset
     periods = 100           # Number of periods in the binomial model
 
-    #call_price = binomial_option_pricing(underlying_price, strike_price, time_to_maturity, risk_free_rate, volatility, periods, 'call')
-    #put_price = binomial_option_pricing(underlying_price, strike_price, time_to_maturity, risk_free_rate, volatility, periods, 'put')
-    #print(f"Call Option Price: {call_price:.2f}")
-    #print(f"Put Option Price: {put_price:.2f}")
+    call_price = binomial_option_pricing(underlying_price, strike_price, time_to_maturity, risk_free_rate, volatility, periods, 'call')
+    put_price = binomial_option_pricing(underlying_price, strike_price, time_to_maturity, risk_free_rate, volatility, periods, 'put')
+    print(f"Call Option Price: {call_price:.2f}")
+    print(f"Put Option Price: {put_price:.2f}")
