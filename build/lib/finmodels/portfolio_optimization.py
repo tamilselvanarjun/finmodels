@@ -14,7 +14,7 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     """
     num_assets = len(expected_returns)
 
-    # Define the variables for optimization
+   
     weights = cp.Variable(num_assets)
     expected_return = expected_returns @ weights
     risk = cp.quad_form(weights, covariance_matrix)
