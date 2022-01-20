@@ -17,13 +17,3 @@ class IPOModel:
     def print_summary(self):
         ipo_valuation = self.calculate_ipo_valuation()
         print(f"IPO Valuation after {self.years} years: ${ipo_valuation:,.2f}")
-
-# Example usage
-#initial_valuation = 500000000  # Initial company valuation before IPO
-#funds_raised = 100000000  # Funds raised during the IPO
-#operating_income = 75000000  # Annual operating income before IPO
-#growth_rate = 0.05  # Annual growth rate of operating income
-#years = 5  # Number of years for the IPO model
-
-#ipo_model = IPOModel(initial_valuation, funds_raised, operating_income, growth_rate, years)
-#ipo_model.print_summary()
