@@ -7,7 +7,7 @@ class IPOModel:
         self.years = years
 
     def calculate_ipo_valuation(self):
-        # Calculate the IPO valuation using a simple discounted cash flow (DCF) model.
+        
         discount_factor = 1 + self.growth_rate
         future_cash_flows = [self.operating_income * (discount_factor ** year) for year in range(1, self.years + 1)]
         total_cash_flows = sum(future_cash_flows)
