@@ -25,7 +25,7 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     
     constraints = [cp.sum(weights) == 1, weights >= 0]
 
-    
+    # Formulate and solve the problem
     problem = cp.Problem(objective, constraints)
     problem.solve()
 
