@@ -2,16 +2,6 @@ import numpy as np
 import cvxpy as cp
 
 def optimize_portfolio(expected_returns, covariance_matrix):
-    """
-    Optimize a portfolio using Mean-Variance Optimization.
-
-    Parameters:
-    - expected_returns: Expected returns for each asset
-    - covariance_matrix: Covariance matrix of asset returns
-
-    Returns:
-    - Optimal portfolio weights if successful, None otherwise
-    """
     num_assets = len(expected_returns)
 
     # Define the variables for optimization
