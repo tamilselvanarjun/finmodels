@@ -2,6 +2,16 @@ import numpy as np
 import cvxpy as cp
 
 def optimize_portfolio(expected_returns, covariance_matrix):
+    """
+    Optimize portfolio weights based on expected returns and covariance matrix.
+
+    Parameters:
+    - expected_returns (numpy.ndarray): Array of expected returns for each asset.
+    - covariance_matrix (numpy.ndarray): Covariance matrix of asset returns.
+
+    Returns:
+    - numpy.ndarray or None: Optimized portfolio weights if successful, None otherwise.
+    """
     num_assets = len(expected_returns)
 
     # Define the variables for optimization
