@@ -19,7 +19,7 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     problem = cp.Problem(objective, constraints)
     problem.solve()
 
-    if problem.status == 'optimal':
+    if problem.status == cp.OPTIMAL:
         return weights.value
     else:
         print("Optimization problem could not be solved.")
