@@ -1,6 +1,6 @@
 #### finmodels
 
-`finmodels` is a Python package designed for financial analysis and optimization. It includes a collection of financial models, such as Discounted Cash Flow (DCF) valuation and Mean-Variance Portfolio Optimization. With finmodels, you can perform essential financial calculations to support investment decisions and portfolio management.
+`finmodels` is a Python package tailored for financial analysis and optimization purposes. It offers a comprehensive set of financial models, including Discounted Cash Flow (DCF) valuation and Mean-Variance Portfolio Optimization. With "finmodels," users can conduct crucial financial calculations to aid in investment decisions and portfolio management.
 
 #### Key Features
 `Discounted Cash Flow (DCF) Valuation`: Calculate the present value of future cash flows to assess the intrinsic value of an investment.
