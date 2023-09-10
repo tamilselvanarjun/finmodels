@@ -23,7 +23,7 @@ class LBOModel:
         Returns:
         - list: Projected free cash flows for each year.
         """
-        # Simplified example: Assuming constant free cash flows for demonstration
+       
         average_free_cash_flow = 50
         free_cash_flows = [average_free_cash_flow] * self.years
         return free_cash_flows
