@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: finmodels
+Version: 1.0.0
+Summary: finmodels is a Python package that provides various financial models for analysis and optimization.
+Home-page: https://github.com/arjunlimat/finmodels
+Author: Tamilselvan_Arjunan
+Author-email: nishantamil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: cvxpy
+
 #### finmodels
 
 `finmodels` is a Python package designed for financial analysis and optimization. It includes a collection of financial models, such as Discounted Cash Flow (DCF) valuation and Mean-Variance Portfolio Optimization. With finmodels, you can perform essential financial calculations to support investment decisions and portfolio management.
