@@ -16,18 +16,16 @@ pip install finmodels
 ```
 Usage
 Discounted Cash Flow (DCF) Valuation
+#### Example usage of DCF valuation
+
 ```
 import finmodels as fm
-```
-#### Example usage of DCF valuation
-```
 cash_flows = [100, 150, 200, 250]
 discount_rate = 0.1
 dcf_value = fm.calculate_dcf(cash_flows, discount_rate)
 print("DCF Value:", dcf_value)
 ```
-#### Portfolio Optimization
-
+#### Example usage of  Portfolio Optimization
 ```
 import finmodels as fm
 import numpy as np
@@ -39,7 +37,27 @@ covariance_matrix = np.array([[0.001, 0.0005, 0.0002],
                               [0.0002, 0.001, 0.003]])
 optimal_weights = fm.optimize_portfolio(expected_returns, covariance_matrix)
 print("Optimal Portfolio Weights:", optimal_weights)
+
 ```
+
+#### Example usage of Leveraged Buyout (LBO) Model
+```
+import finmodels as fm
+# Example usage
+acquisition_price_example = 1000
+equity_percentage_example = 0.3
+debt_interest_rate_example = 0.05
+projection_years_example = 5
+
+# Create an instance of LBOModel
+lbo_model = fm.LBOModel(acquisition_price_example, equity_percentage_example,
+                     debt_interest_rate_example, projection_years_example)
+
+# Calculate and print equity returns
+equity_returns_result = lbo_model.calculate_equity_returns()
+print(f"Equity Returns for each year: {equity_returns_result}")
+```
+
 #### Contributors
 Tamilselvan Arjunan
 #### License

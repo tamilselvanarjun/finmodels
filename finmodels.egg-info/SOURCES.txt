@@ -2,6 +2,7 @@ README.md
 setup.py
 finmodels/__init__.py
 finmodels/dcf.py
+finmodels/lbo.py
 finmodels/portfolio_optimization.py
 finmodels.egg-info/PKG-INFO
 finmodels.egg-info/SOURCES.txt
