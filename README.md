@@ -7,6 +7,13 @@
 
 `Portfolio Optimization`: Optimize portfolio allocations using Mean-Variance Optimization to balance returns and risk.
 
+`The Leveraged Buyout (LBO) Model`: LBO Model is a financial analysis tool used in corporate finance for 
+
+evaluating the acquisition of a company using a significant amount of borrowed funds.
+
+`IPO Model`: IPO Model is a simple Python script for calculating the Initial Public Offering (IPO) valuation using a discounted cash flow (DCF) model.
+
+
 #### Installation
 
 You can install the package using `pip`:
@@ -56,6 +63,20 @@ lbo_model = fm.LBOModel(acquisition_price_example, equity_percentage_example,
 # Calculate and print equity returns
 equity_returns_result = lbo_model.calculate_equity_returns()
 print(f"Equity Returns for each year: {equity_returns_result}")
+```
+
+#### Example usage of IPO Model
+```
+import finmodels as fm
+# Example usage
+initial_valuation = 500000000  # Initial company valuation before IPO
+funds_raised = 100000000  # Funds raised during the IPO
+operating_income = 75000000  # Annual operating income before IPO
+growth_rate = 0.05  # Annual growth rate of operating income
+years = 5  # Number of years for the IPO model
+
+ipo_model = fm.IPOModel(initial_valuation, funds_raised, operating_income, growth_rate, years)
+ipo_model.print_summary()
 ```
 
 #### Contributors

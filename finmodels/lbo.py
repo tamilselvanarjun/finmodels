@@ -66,4 +66,5 @@ class LBOModel:
 # Calculate and print equity returns (commented out)
 # equity_returns_result = lbo_model.calculate_equity_returns()
 # print(f"Equity Returns for each year: {equity_returns_result}")
+#
 
