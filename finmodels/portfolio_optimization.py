@@ -1,4 +1,3 @@
-# financial_models/portfolio_optimization.py
 import numpy as np
 import cvxpy as cp
 
@@ -11,7 +10,7 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     - covariance_matrix: Covariance matrix of asset returns
 
     Returns:
-    - Optimal portfolio weights
+    - Optimal portfolio weights if successful, None otherwise
     """
     num_assets = len(expected_returns)
 
@@ -30,4 +29,8 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     problem = cp.Problem(objective, constraints)
     problem.solve()
 
-    return weights.value
+    if problem.status == 'optimal':
+        return weights.value
+    else:
+        print("Optimization problem could not be solved.")
+        return None
