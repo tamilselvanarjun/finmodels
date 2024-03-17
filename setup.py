@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
     
 setup(
     name='finmodels',
-    version='2.0.1',
+    version='2.0.2',
     packages=find_packages(),
     install_requires=[
         'numpy',
