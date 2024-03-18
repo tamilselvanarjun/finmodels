@@ -22,16 +22,7 @@ You can install the package using `pip`:
 pip install finmodels
 ```
 Usage
-Discounted Cash Flow (DCF) Valuation
-#### Example usage of DCF valuation
 
-```
-import finmodels as fm
-cash_flows = [100, 150, 200, 250]
-discount_rate = 0.1
-dcf_value = fm.calculate_dcf(cash_flows, discount_rate)
-print("DCF Value:", dcf_value)
-```
 #### Example usage of  Portfolio Optimization
 ```
 import finmodels as fm
@@ -46,6 +37,18 @@ optimal_weights = fm.optimize_portfolio(expected_returns, covariance_matrix)
 print("Optimal Portfolio Weights:", optimal_weights)
 
 ```
+
+Discounted Cash Flow (DCF) Valuation
+#### Example usage of DCF valuation
+
+```
+import finmodels as fm
+cash_flows = [100, 150, 200, 250]
+discount_rate = 0.1
+dcf_value = fm.calculate_dcf(cash_flows, discount_rate)
+print("DCF Value:", dcf_value)
+```
+
 
 #### Example usage of Leveraged Buyout (LBO) Model
 ```
