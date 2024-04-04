@@ -24,7 +24,7 @@ def binomial_option_pricing(S, K, T, r, sigma, n, option_type='call'):
 if __name__ == "__main__":
     underlying_price = 100  # Current price of the underlying asset
     strike_price = 100      # Strike price of the option
-    time_to_maturity = 1    # Time to maturity in years
+    time_to_maturity = 2    # Time to maturity in years
     risk_free_rate = 0.05   # Risk-free interest rate
     volatility = 0.2        # Volatility of the underlying asset
     periods = 100           # Number of periods in the binomial model
