@@ -13,6 +13,7 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     """
     num_assets = len(expected_returns)
 
+<<<<<<< HEAD
     # Initialize weights with equal distribution
     weights = [1 / num_assets] * num_assets
 
@@ -22,6 +23,18 @@ def optimize_portfolio(expected_returns, covariance_matrix):
 
     # Maximize return and minimize risk
     objective_value = expected_return - 0.5 * risk
+=======
+    
+    weights = cp.Variable(num_assets)
+    expected_return = expected_returns @ weights
+    risk = cp.quad_form(weights, covariance_matrix)
+
+    
+    objective = cp.Maximize(expected_return - 0.5 * risk)
+
+    
+    constraints = [cp.sum(weights) == 1, weights >= 0]
+>>>>>>> d7d41825fdf14ed26ae59f330531795bb2c7f6d9
 
     # Check if weights sum to 1 and individual weights are non-negative
     weights_sum_to_one = sum(weights) == 1
