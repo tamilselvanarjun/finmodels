@@ -5,12 +5,9 @@ with open('README.md', 'r', encoding='utf-8') as f:
     
 setup(
     name='finmodels',
-    version='2.0.3',
+    version='2.0.4',
     packages=find_packages(),
-    install_requires=[
-        'numpy',
-        'cvxpy',
-    ],
+    install_requires=[],
     author='Tamilselvan_Arjunan',
     author_email='nishantamil@gmail.com',
     description='finmodels is a Python package that provides various financial models for analysis and optimization.',

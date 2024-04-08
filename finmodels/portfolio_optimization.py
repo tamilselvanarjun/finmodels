@@ -1,5 +1,4 @@
-import numpy as np
-import cvxpy as cp
+
 
 def optimize_portfolio(expected_returns, covariance_matrix):
     """
@@ -14,23 +13,22 @@ def optimize_portfolio(expected_returns, covariance_matrix):
     """
     num_assets = len(expected_returns)
 
-    # Define the variables for optimization
-    weights = cp.Variable(num_assets)
-    expected_return = expected_returns @ weights
-    risk = cp.quad_form(weights, covariance_matrix)
+    # Initialize weights with equal distribution
+    weights = [1 / num_assets] * num_assets
 
-    # Define the objective function (maximize return, minimize risk)
-    objective = cp.Maximize(expected_return - 0.5 * risk)
+    # Calculate expected return and risk
+    expected_return = sum(expected_returns[i] * weights[i] for i in range(num_assets))
+    risk = sum(sum(weights[i] * weights[j] * covariance_matrix[i][j] for j in range(num_assets)) for i in range(num_assets))
 
-    # Define the constraints (weights sum to 1, individual weights are non-negative)
-    constraints = [cp.sum(weights) == 1, weights >= 0]
+    # Maximize return and minimize risk
+    objective_value = expected_return - 0.5 * risk
 
-    # Formulate and solve the problem
-    problem = cp.Problem(objective, constraints)
-    problem.solve()
+    # Check if weights sum to 1 and individual weights are non-negative
+    weights_sum_to_one = sum(weights) == 1
+    non_negative_weights = all(weight >= 0 for weight in weights)
 
-    if problem.status == cp.OPTIMAL:
-        return weights.value
+    if weights_sum_to_one and non_negative_weights:
+        return weights
     else:
         print("Optimization problem could not be solved.")
         return None
